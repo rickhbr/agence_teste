@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1054796557924",
+    "project_id": "agence-teste-74034",
+    "storage_bucket": "agence-teste-74034.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1054796557924:android:4bfa84fab57676a73d7971",
+        "android_client_info": {
+          "package_name": "com.example.agence_test"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1054796557924-fp7ju0046m4qipnru9cq8h0q4n6kb43f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZ2dcE_T-J19r188yYGVWN6ZxDgAi4x3Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1054796557924-fp7ju0046m4qipnru9cq8h0q4n6kb43f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
