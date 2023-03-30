@@ -2,6 +2,7 @@ import 'package:agence_test/app/core/base/colors.dart';
 import 'package:agence_test/app/core/base/images.dart';
 import 'package:agence_test/app/globals/services/navigation_service.dart';
 import 'package:agence_test/app/modules/product/controllers/product_controller.dart';
+import 'package:agence_test/app/routes/app_routes.dart';
 import 'package:agence_test/app/widgets/buttons/button_rectangle.dart';
 import 'package:agence_test/app/widgets/loadings/loading.dart';
 import 'package:agence_test/app/widgets/toast/toast.dart';
@@ -14,7 +15,6 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 class ProductView extends GetView<ProductController> {
   final String? nomeProduto;
   ProductView({super.key, required this.nomeProduto});
-
   final ProductController productController = Get.put(ProductController());
   static const LatLng _kMapCenter = LatLng(
     -23.6815315,
@@ -105,7 +105,7 @@ class ProductView extends GetView<ProductController> {
                         loading: false,
                         text: "Escolher outro produto",
                         onPress: () {
-                          NavigationService.goBack();
+                          NavigationService.push(PagesRoutes.homeRoute);
                         },
                       ),
                     ),
@@ -187,8 +187,7 @@ class ProductView extends GetView<ProductController> {
                           "A compra do $nomeProduto foi realizada com sucesso!",
                       error: false,
                     );
-                    Get.back();
-                    Get.back();
+                    NavigationService.push(PagesRoutes.homeRoute);
                   },
                   child: const Text(
                     'Sim',

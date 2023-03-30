@@ -12,6 +12,7 @@ import 'package:get/get.dart';
 
 class SigninView extends GetView<SigninController> {
   SigninView({Key? key}) : super(key: key);
+  final _formKeySignIn = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +25,7 @@ class SigninView extends GetView<SigninController> {
           goBack: false,
           children: [
             Form(
-              key: controller.formKeySignIn,
+              key: _formKeySignIn,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
@@ -69,8 +70,7 @@ class SigninView extends GetView<SigninController> {
                       text: "Entrar",
                       onPress: () async {
                         FocusScope.of(context).unfocus();
-                        if (controller.formKeySignIn.currentState!
-                            .validate()) {}
+                        if (_formKeySignIn.currentState!.validate()) {}
                       },
                     ),
                   ),

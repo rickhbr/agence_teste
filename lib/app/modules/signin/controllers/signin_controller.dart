@@ -9,7 +9,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class SigninController extends GetxController {
-  final formKeySignIn = GlobalKey<FormState>();
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
   RxBool isLoading = false.obs;
@@ -54,6 +53,7 @@ class SigninController extends GetxController {
   Future<void> logout() async {
     await FirebaseAuth.instance.signOut();
     userAgence.value = UserAgence(name: '', email: '');
-    NavigationService.push(PagesRoutes.signInRoute);
+    NavigationService.replace(PagesRoutes.signInRoute);
+    dispose();
   }
 }

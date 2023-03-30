@@ -46,35 +46,7 @@ class WelcomeView extends GetView<WelcomeController> {
                       SizedBox(
                         height: 24.0,
                       ),
-                      ButtonImage(
-                        onPress: () {
-                          controller.launchLinkedin();
-                        },
-                        text: "Linkedin",
-                        image: Images.icLinkedin,
-                      ),
-                      ButtonImage(
-                        onPress: () {
-                          controller.launchCodeProject();
-                        },
-                        text: "Código do projeto",
-                        image: Images.icGit,
-                      ),
-                      SizedBox(
-                        height: 24.0,
-                      ),
-                      SizedBox(
-                        height: 32.0,
-                      ),
-                      Container(
-                        width: MediaQuery.of(context).size.width * 0.9,
-                        child: ButtonRectangle(
-                          text: 'Continuar',
-                          onPress: () {
-                            NavigationService.push(PagesRoutes.signInRoute);
-                          },
-                        ),
-                      )
+                      _buildButtons(context),
                     ],
                   ),
                 ),
@@ -83,6 +55,42 @@ class WelcomeView extends GetView<WelcomeController> {
           ],
         ),
       ),
+    );
+  }
+
+  Widget _buildButtons(BuildContext context) {
+    return Column(
+      children: [
+        ButtonImage(
+          onPress: () {
+            controller.launchLinkedin();
+          },
+          text: "Linkedin",
+          image: Images.icLinkedin,
+        ),
+        ButtonImage(
+          onPress: () {
+            controller.launchCodeProject();
+          },
+          text: "Código do projeto",
+          image: Images.icGit,
+        ),
+        SizedBox(
+          height: 24.0,
+        ),
+        SizedBox(
+          height: 32.0,
+        ),
+        Container(
+          width: MediaQuery.of(context).size.width * 0.9,
+          child: ButtonRectangle(
+            text: 'Continuar',
+            onPress: () {
+              NavigationService.push(PagesRoutes.signInRoute);
+            },
+          ),
+        )
+      ],
     );
   }
 }
