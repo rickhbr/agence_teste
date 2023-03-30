@@ -147,7 +147,7 @@ class LayoutPageWithDrawer extends StatelessWidget {
                                 color: CustomColors.accentColor,
                               ),
                             ),
-                          CustomTitle(text: title),
+                          Expanded(child: CustomTitle(text: title)),
                         ],
                       ),
                     ),
