@@ -19,7 +19,7 @@ O teste foi utilizado o padrão do GetX_Pattern, onde apresenta uma arquitetura 
 ## Gerencia de Estados
 Para o Gerenciamento de Estado foi utilizado o GetX.
 
-##Injeção de Dependência
+## Injeção de Dependência
 Foi utilizdo o Get para o DI.
 
 ## Lógica da aplicação
